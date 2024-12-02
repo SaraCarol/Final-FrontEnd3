@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -35,6 +36,16 @@
 
 .card {
   padding: 2em;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  
+}
+
+.card img{
+  width: 100%;
 }
 
 .read-the-docs {

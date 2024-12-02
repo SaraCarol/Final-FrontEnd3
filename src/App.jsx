@@ -15,15 +15,17 @@ function App() {
   return (
       <div className="App">
           <Navbar />
-          <Footer />
+          
+
           <Routes>
             <Route path={routes.home} element= {<Home />}/>
-              <Route path={routes.detail} element= {<Detail />}/>
-              <Route path={routes.favs} element= {<Favs />}/>
-              <Route path={routes.contact} element= {<Contact />}/>
-              <Route path={routes.others} element= { <h1>Error 404 - Página no encontrada</h1>}/>
+            <Route path={routes.detail} element= {<Detail />}/>
+            <Route path={routes.favs} element= {<Favs />}/>
+            <Route path={routes.contact} element= {<Contact />}/>
+            <Route path={routes.others} element= { <h1>Error 404 - Página no encontrada</h1>}/>
           </Routes>
-         
+
+          <Footer />
       </div>
   );
 }
