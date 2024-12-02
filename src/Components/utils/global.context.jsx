@@ -1,12 +1,15 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { reducer } from "./reducer";
 
+
 export const initialState = {
-  theme: "", 
+  theme: "light", 
   data: []
 }
+
 
 export const ContextGlobal = createContext();
 
@@ -20,10 +23,9 @@ export const ContextProvider = ({ children }) => {
     console.log(res.data)
     dispatch({type: 'DATA_ACTION', payload: res.data} )
   })
-  }, [])
+  document.body.className = state.theme
+  }, [state.theme])
 
-  
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
   return (
     <ContextGlobal.Provider value={{state, dispatch}}>
