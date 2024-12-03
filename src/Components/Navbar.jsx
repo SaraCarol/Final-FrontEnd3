@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to={routes.home}><h4>HOME</h4></Link>
-      <Link to={routes.favs}><h4>FAVORITES</h4></Link>
-      <Link to={routes.contact}><h4>CONTACT</h4></Link>
+      <Link to={routes.home} className="navbar-link"><h4>HOME</h4></Link>
+      <Link to={routes.favs} className="navbar-link"><h4>FAVORITES</h4></Link>
+      <Link to={routes.contact} className="navbar-link"><h4>CONTACT</h4></Link>
 
       <button onClick={() => dispatch({type: 'THEME_ACTION'})}>Change theme</button>
     </nav>
