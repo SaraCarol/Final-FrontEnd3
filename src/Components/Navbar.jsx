@@ -15,7 +15,7 @@ const Navbar = () => {
       <Link to={routes.favs} className="navbar-link"><h4>FAVORITES</h4></Link>
       <Link to={routes.contact} className="navbar-link"><h4>CONTACT</h4></Link>
 
-      <button onClick={() => dispatch({type: 'THEME_ACTION'})}>Change theme</button>
+      <button onClick={() => dispatch({type: 'THEME_ACTION'})}></button>
     </nav>
   )
 }

@@ -45,18 +45,20 @@ nav{
 }
 
 nav > button {
-  padding: 0.5rem 1rem;
-  background-color: #4fa3f7;
-  color: #fff;
+  padding: 1.3rem 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 26px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  background-image: url('/public/images/daymode.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background 0.3s ease-in-out;
+  width: 10%;
 }
 
 nav > button:hover {
-  background-color: #3878d8;
+  opacity: 0.8;
 }
 
 a{
@@ -191,4 +193,8 @@ tr:nth-child(even) {
 .dark footer{
   background-color: #333333; 
   color: #f0f0f0;
+}
+
+.dark nav > button{
+  background-image: url('/public/images/nightmode.jpg');
 }
