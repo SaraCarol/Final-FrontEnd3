@@ -53,7 +53,7 @@ const Form = () => {
         <button type="submit">Submit</button>
         {error ? (
                 <h6 style={{color:"red"}}> **Por favor verifique su información nuevamente** </h6>
-            ): message ? <h6 style={{color:"green"}}> **Gracias {user.name}, te contactaremos cuando antes vía mail**</h6>: null}
+            ): message ? <h6 style={{color:"green"}}> **Gracias {user.name}, te contactaremos cuanto antes vía mail**</h6>: null}
       </form>
     </div>
   );

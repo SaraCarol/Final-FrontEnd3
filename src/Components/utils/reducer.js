@@ -4,5 +4,7 @@ export function reducer (state, action){
             return {...state, theme: state.theme === "light" ? "dark" : "light"};
         case 'DATA_ACTION':
             return {...state, data: action.payload};
+        case 'FAVS_ACTION':
+        return {...state, favs: [ ...state.favs, action.payload]};
     }
 }

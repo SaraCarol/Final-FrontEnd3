@@ -10,14 +10,12 @@ import { useContextGlobal } from '../Components/utils/global.context'
 const Home = () => {
   const {state} = useContextGlobal()
 
-
   return (
     <main className="" >
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
         {state.data.map(user =>(
-          <Card key={user.id} id={user.id} name={user.name} username= {user.username} />
+          <Card key={user.id} user={user} />
         ))}
         
       </div>
