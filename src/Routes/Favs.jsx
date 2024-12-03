@@ -2,7 +2,6 @@
 import React from "react";
 import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
-import Home from "./Home";
 
 const Favs = () => {
   const {state} = useContextGlobal()
