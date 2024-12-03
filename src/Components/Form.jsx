@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useReducer, useState} from "react";
+import React, { useState} from "react";
 
 
 
@@ -11,21 +11,24 @@ const Form = () => {
   })
   const [error, setError] = useState(false)
   const [message, setMessage] = useState(false)
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const testEmail = emailRegex.test(user.email)
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    if (
-      user.name.trim().length < 5 &&
-      !emailRegex.test(user.email)
-      //FALTA VALIDACION DE EMAIL
-    ){
+    if (testEmail) {
+      if(user.name.trim().length > 5){
+        setError(false)
+        setMessage(true)
+        console.log(user)
+      } else {
+        setError(true)
+        setMessage(false)
+      }
+    } else {
       setError(true)
       setMessage(false)
-    } else {
-      setMessage(true)
-      setError(false)
-      console.log(user)
     }
   }
 
